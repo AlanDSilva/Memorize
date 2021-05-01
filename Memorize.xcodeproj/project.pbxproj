@@ -16,6 +16,7 @@
 		E788732C263D43A800FC21F3 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788732B263D43A800FC21F3 /* Grid.swift */; };
 		E788732E263D490F00FC21F3 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788732D263D490F00FC21F3 /* GridLayout.swift */; };
 		E7887330263D4EE900FC21F3 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788732F263D4EE900FC21F3 /* Array+Identifiable.swift */; };
+		E7887332263D5E6100FC21F3 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7887331263D5E6100FC21F3 /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E788732B263D43A800FC21F3 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		E788732D263D490F00FC21F3 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		E788732F263D4EE900FC21F3 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		E7887331263D5E6100FC21F3 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				E788732F263D4EE900FC21F3 /* Array+Identifiable.swift */,
 				E788732D263D490F00FC21F3 /* GridLayout.swift */,
 				E7887327263AE6A500FC21F3 /* MemoryGame.swift */,
+				E7887331263D5E6100FC21F3 /* Array+Only.swift */,
 				E7887329263AE8BC00FC21F3 /* EmojiMemoryGame.swift */,
 				E788731C263ACCED00FC21F3 /* Assets.xcassets */,
 				E7887321263ACCED00FC21F3 /* Info.plist */,
@@ -160,6 +163,7 @@
 				E788732C263D43A800FC21F3 /* Grid.swift in Sources */,
 				E7887330263D4EE900FC21F3 /* Array+Identifiable.swift in Sources */,
 				E788732A263AE8BC00FC21F3 /* EmojiMemoryGame.swift in Sources */,
+				E7887332263D5E6100FC21F3 /* Array+Only.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
