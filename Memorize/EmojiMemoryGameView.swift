@@ -18,14 +18,18 @@ struct EmojiMemoryGameView: View {
                 Text(viewModel.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 Spacer()
                 Button("New Game") {
-                    viewModel.startNewGame()
+                    withAnimation(.easeInOut) {
+                        viewModel.startNewGame()
+                    }
                 }
             }.padding()
             .frame(maxWidth: .infinity)
             
             Grid(viewModel.cards) { card in
                 CardView(card: card).onTapGesture{
-                    viewModel.choose(card: card)
+                    withAnimation(.linear) {
+                        viewModel.choose(card: card)
+                    }
                 }
                 .padding(5)
             }
@@ -43,11 +47,15 @@ struct CardView: View {
         GeometryReader{ geometry in
             if card.isFaceUp || !card.isMatched {
                 ZStack {
-                    Pie(startAngle: Angle.degrees(-90), endAngle: Angle.degrees(30), clockWise: true).padding(5).opacity(0.4)
+//                    Pie(startAngle: Angle.degrees(-90), endAngle: Angle.degrees(30), clockWise: true).padding(5).opacity(0.4)
+                    Diamond()
                     Text(card.content)
                         .font(Font.system(size: fontSize(for: geometry.size)) )
+                        .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                        .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
                 }
                 .cardify(isFaceUp: card.isFaceUp)
+                .transition(AnyTransition.scale)
             }
         }
         

@@ -19,6 +19,7 @@
 		E7887332263D5E6100FC21F3 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7887331263D5E6100FC21F3 /* Array+Only.swift */; };
 		E7887334263E986C00FC21F3 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7887333263E986C00FC21F3 /* Pie.swift */; };
 		E7887336263E9E8F00FC21F3 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7887335263E9E8F00FC21F3 /* Cardify.swift */; };
+		E7887338263F1D0500FC21F3 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7887337263F1D0500FC21F3 /* Diamond.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E7887331263D5E6100FC21F3 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 		E7887333263E986C00FC21F3 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		E7887335263E9E8F00FC21F3 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		E7887337263F1D0500FC21F3 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E788731A263ACCEC00FC21F3 /* EmojiMemoryGameView.swift */,
 				E7887335263E9E8F00FC21F3 /* Cardify.swift */,
 				E7887333263E986C00FC21F3 /* Pie.swift */,
+				E7887337263F1D0500FC21F3 /* Diamond.swift */,
 				E788732B263D43A800FC21F3 /* Grid.swift */,
 				E788732F263D4EE900FC21F3 /* Array+Identifiable.swift */,
 				E788732D263D490F00FC21F3 /* GridLayout.swift */,
@@ -172,6 +175,7 @@
 				E788732A263AE8BC00FC21F3 /* EmojiMemoryGame.swift in Sources */,
 				E7887336263E9E8F00FC21F3 /* Cardify.swift in Sources */,
 				E7887332263D5E6100FC21F3 /* Array+Only.swift in Sources */,
+				E7887338263F1D0500FC21F3 /* Diamond.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
