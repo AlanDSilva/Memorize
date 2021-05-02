@@ -11,15 +11,27 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
-        Grid(viewModel.cards) { card in
-                CardView(card: card).onTapGesture{
-                    viewModel.choose(card: card)
+        VStack{
+            HStack() {
+                Text("Score: \(viewModel.score)")
+                Spacer()
+                Text(viewModel.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Spacer()
+                Button("New Game") {
+                    viewModel.startNewGame()
                 }
-                .padding(5)
-            }
-        .foregroundColor(.orange)
-        .padding()
-        
+            }.padding()
+            .frame(maxWidth: .infinity)
+            
+            Grid(viewModel.cards) { card in
+                    CardView(card: card).onTapGesture{
+                        viewModel.choose(card: card)
+                    }
+                    .padding(5)
+                }
+            .foregroundColor(.orange)
+            .padding()
+        }
     }
 }
 
