@@ -10,6 +10,7 @@ import Foundation
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
     private(set) var name: String
+    private(set) var color: ThemeColor
     private(set) var points: Int = 0
     
     private var indexOfTheOneAndOnlyFaceUpCard: Int? {
@@ -43,8 +44,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    init(_ name: String,numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+    init(_ name: String, color: ThemeColor,numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         self.name = name
+        self.color = color
         cards = Array<Card>()
         for pairIndex in 0..<numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)
@@ -60,5 +62,14 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         var isSeen: Bool = false
         var content: CardContent
         var id: Int
+    }
+    
+    enum ThemeColor {
+        case orange
+        case blue
+        case red
+        case pink
+        case yellow
+        case green
     }
 }

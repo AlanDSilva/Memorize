@@ -33,7 +33,7 @@ struct EmojiMemoryGameView: View {
                 }
                 .padding(5)
             }
-            .foregroundColor(.orange)
+            .foregroundColor(color(of: viewModel.color))
             .padding()
         }
     }
@@ -47,8 +47,8 @@ struct CardView: View {
         GeometryReader{ geometry in
             if card.isFaceUp || !card.isMatched {
                 ZStack {
-//                    Pie(startAngle: Angle.degrees(-90), endAngle: Angle.degrees(30), clockWise: true).padding(5).opacity(0.4)
-                    Diamond()
+                    Pie(startAngle: Angle.degrees(-90), endAngle: Angle.degrees(30), clockWise: true).padding(5).opacity(0.4)
+                    
                     Text(card.content)
                         .font(Font.system(size: fontSize(for: geometry.size)) )
                         .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
@@ -67,6 +67,17 @@ struct CardView: View {
 
 private func fontSize(for size: CGSize) -> CGFloat {
     min(size.width, size.height) * 0.7
+}
+
+private func color(of color: MemoryGame<String>.ThemeColor) -> Color {
+    switch color {
+    case .orange: return Color.orange
+    case .blue: return Color.blue
+    case .yellow: return Color.yellow
+    case .green: return Color.green
+    case .pink: return Color.pink
+    default: return Color.red
+    }
 }
 
 
